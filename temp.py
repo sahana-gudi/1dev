@@ -1,8 +1,12 @@
 import sys
 
-# Check if user provided input
+# If user provides an argument, use it. Otherwise default to 0.
 if len(sys.argv) == 2:
-    celsius = float(sys.argv[1])
+    try:
+        celsius = float(sys.argv[1])
+    except ValueError:
+        print("Invalid input. Please enter a numeric value.")
+        sys.exit(1)
 else:
     print("No input given - using default value.")
     celsius = 0
