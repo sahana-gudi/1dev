@@ -1,11 +1,16 @@
 import sys
-if len(sys.argv)!=2:
-    print("Usage:python temp.py<temp_in_celsius>")
-    sys.exit(1)
-try:
-    celsius=float(sys.argv[1])
-    fahrenheit=(celsius*9/5)+32
-    print(f"{celsius}°C is equal to {fahrenheit}°F")
 
-except ValueError:
-    print ("Plese Enter a valid numeric value for celsius temp")
+# Check if user provided input
+if len(sys.argv) == 2:
+    celsius = float(sys.argv[1])
+else:
+    print("No input given - using default value.")
+    celsius = 0
+
+# Convert to Fahrenheit
+fahrenheit = (celsius * 9 / 5) + 32
+
+# Display results
+print("Temperature in Celsius    :", celsius)
+print("Temperature in Fahrenheit :", fahrenheit)
+print("Final Temperature Conversion Completed")
