@@ -1,6 +1,6 @@
 import sys
 if len(sys.argv)!=2:
-    print("Usage:python temp(1).php<temp_in_celsius>")
+    print("Usage:python temp(one).py<temp_in_celsius>")
     sys.exit(1)
 try:
     celsius=float(sys.argv[1])
